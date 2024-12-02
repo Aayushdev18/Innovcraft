@@ -1,0 +1,467 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #fffdf3; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    /* position: fixed; */
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    background-color: transparent;
+}
+
+.navbar-left, .navbar-right{
+    background-color: transparent;
+}
+
+.navbar-left a, .navbar-right a {
+    background-color: transparent;
+    text-decoration: none;
+    color: rgb(251, 247, 247);
+    padding: 10px 20px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.navbar-left a:hover, .navbar-right a:hover {
+    background-color: transparent;
+    border-bottom: 2px solid #333; 
+}
+
+.navbar-right a {
+    background-color: transparent;
+    margin-left: 30px; 
+}
+
+.background-image {
+    width: 100%;
+    height: 75vh; 
+    background-image: url('https://abhyanjana.com/wp-content/uploads/2023/08/abhyanjana-background-1.png'); 
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 5px;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+.navbar-right {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.navbar-right a {
+    display: block;
+}
+
+.navbar-right.active {
+    display: block;
+    position: absolute;
+    top: 80px; 
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navbar-right a {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px) {
+    .navbar-left {
+        display: none;
+    }
+
+    .navbar-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+.products{
+    display: flex;
+    background-color: #fffdf3;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+/* Basic styles */
+.product-display{
+    background-color: #fffdf3;
+}
+
+.sales-item {
+    width: 260px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-left: 4rem;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fffdf3;
+}
+
+.item-image {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.content {
+    margin-top: 10px;
+    background-color: #fffdf3;
+}
+
+.rating {
+    color: #A18039;
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+.price {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: grey;
+    font-size: 14px;
+}
+
+.discounted-price {
+    display: flex;
+    justify-content: flex-start;
+    color: #333;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+    
+}
+
+.add-to-cart {
+    width: 240px;
+    padding: 10px;
+    margin-top: 15px;
+    background-color:#A18039;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.product-display{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:2rem;
+}
+
+.people-heading{
+    display: flex;
+    padding: 3rem;
+    justify-content: center;
+}
+.shorts-container{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+.shorts{
+    border: solid #A18039;
+}
+
+.care{
+    display: flex;
+    justify-content: center;
+    padding: 3rem;
+}
+.img-stories{
+    display: flex;
+    
+    justify-content:center;
+    align-items: center;
+}
+.photo-abhi{
+    display: flex;
+    
+}
+
+.photo-div{
+    height: 32rem;
+}
+.story-abhi{
+    height: 32em;
+    width: 33rem;
+    border: solid rgb(206, 158, 16);
+    border-top-right-radius: 15rem;
+    border-bottom-right-radius: 15rem;
+    
+}
+.para{
+    display: flex;
+    width: 20rem;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    font-size: medium;
+}
+
+.story-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #A18039;
+    margin: 5rem ;
+    height: 4rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.story-btn{
+    
+    height: 3rem;
+    width: 7rem;
+    border-radius: 1.5rem;
+    background-color: #A18039;
+    color: aliceblue;
+    text-decoration: solid;
+}
+.story-btn:hover{
+    background-color: #ad9e7c;
+}
+
+.customer-stories{
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+
+
+.feedback-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 1rem;
+    gap: 5rem;
+
+    max-width: 800px;
+}
+
+.feedback-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 25rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.feedback-message {
+    font-size: 12px;
+    color: #333;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.customer-name {
+    font-size: 13px;
+    color: #555;
+    font-weight: bold;
+    text-align: right;
+}
+
+.subscribe{
+    margin: 4rem 4rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid #A18039 2px;
+    border-radius: 1rem;    
+}
+.input-btn{
+    display: flex;
+    margin-top: 4rem;
+    gap:5rem;
+}
+.input-btn input{
+    width: 20rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+}
+.input-btn button{
+    width: 9.5rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    color: wheat;
+    background-color: #A18039;
+}
+.input-btn input::placeholder{
+    padding: 17px;
+    padding-top: 20px;
+    color: gray;
+    margin-left: 8rem;
+    font-size: 1.5rem;
+    /* font-style: italic; */
+}
+
+
+.footer {
+    background-image: url('https://abhyanjana.com/wp-content/uploads/2023/03/footerbg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.footer-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 250px;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.footer-logo img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer-links {
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.footer-links li {
+    background-color: transparent;
+    margin: 5px 15px;
+}
+
+.footer-links a {
+    background-color: transparent;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    background-color: transparent;
+    font-size: 12px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+/* Cart bubble styles */
+.cart-bubble {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.input-btn input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.input-btn button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-btn button:hover {
+    background-color: #555;
+}
+
+/* Footer link styling */
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #007BFF;
+}
+
